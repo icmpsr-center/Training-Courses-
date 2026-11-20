@@ -1,0 +1,1412 @@
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدليل الشامل للدورات التدريبية التأهيلية لخريجي الصيدلة | ICMPSR</title>
+    <!-- تحميل مكتبة Tailwind CSS للتنسيق المتجاوب -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- خطوط عربية وإنجليزية متناسقة (Cairo, Tajawal & Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        // إعداد رموز الألوان والخطوط الخاصة بالهوية البصرية للمركز (ICMPSR)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            950: '#04182E',
+                            900: '#062343',
+                            800: '#0A315E',
+                            700: '#0D3B6E',
+                            600: '#134E8E',
+                        },
+                        skybrand: {
+                            600: '#1565C0',
+                            500: '#1E88E5',
+                            100: '#E3F2FD',
+                        },
+                        gold: {
+                            600: '#B08225',
+                            500: '#C89B3C',
+                            400: '#D4AF37',
+                            300: '#E5C158',
+                            100: '#FDF8EB',
+                        },
+                        surface: '#F4F7FA'
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        tajawal: ['Tajawal', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'gold': '0 10px 30px -5px rgba(200, 155, 60, 0.28)',
+                        'navy': '0 15px 35px -5px rgba(6, 35, 67, 0.14)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* التنسيقات الأساسية والخطوط */
+        body {
+            font-family: 'Cairo', 'Tajawal', sans-serif;
+            background-color: #F4F7FA;
+            color: #062343;
+            overflow-x: hidden;
+        }
+        .en-text {
+            font-family: 'Inter', sans-serif;
+            direction: ltr;
+            unicode-bidi: embed;
+        }
+        /* خلفية القسم الرئيسي الكحلية الملكية مع توهج ذهبي وأزرق */
+        .hero-pattern {
+            background-color: #062343;
+            background-image:
+                radial-gradient(circle at 15% 25%, rgba(30, 136, 229, 0.18) 0%, transparent 45%),
+                radial-gradient(circle at 85% 75%, rgba(212, 175, 55, 0.16) 0%, transparent 45%),
+                linear-gradient(135deg, #062343 0%, #0A315E 55%, #0D3B6E 100%);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #C89B3C 0%, #E5C158 50%, #B08225 100%);
+        }
+        .gold-text-gradient {
+            background: linear-gradient(135deg, #E5C158 0%, #D4AF37 50%, #F3D98B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border-glow {
+            border: 1px solid rgba(212, 175, 55, 0.45);
+            box-shadow: 0 4px 20px rgba(200, 155, 60, 0.12);
+        }
+        /* تخصيص شريط التمرير */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F4F7FA;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0A315E;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #C89B3C;
+        }
+        /* خلفية النوافذ المنبثقة */
+        .modal-backdrop {
+            backdrop-filter: blur(6px);
+            background-color: rgba(4, 24, 46, 0.80);
+        }
+        /* حركة انسيابية للنقوش الكيميائية */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+        }
+        .animate-float {
+            animation: floatSlow 5s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold-400 selection:text-navy-900">
+
+    <!-- ==================== HEADER & NAVIGATION (الشريط العلوي الكحلي الملكي) ==================== -->
+    <header class="sticky top-0 z-40 bg-navy-950/95 backdrop-blur-md border-b-2 border-gold-500 shadow-lg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap items-center justify-between py-2.5 sm:py-3 gap-3 sm:gap-4">
+
+                <!-- الشعار الدائري الأصلي للمركز في الزاوية اليمنى -->
+                <a href="#" class="flex items-center gap-3 sm:gap-4 group">
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 md:w-[70px] md:h-[70px] rounded-full bg-white p-0.5 border-2 border-gold-400 shadow-gold flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105">
+                        <img src="1000665943.png"
+                             alt="شعار المركز الدولي للدراسات والأبحاث الطبية والصيدلانية ICMPSR"
+                             onerror="this.onerror=null; this.src='https://placehold.co/160x160/FFFFFF/062343?text=ICMPSR';"
+                             class="w-full h-full object-cover rounded-full block">
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="flex flex-wrap items-center gap-2 mb-1">
+                            <span class="font-black text-sm sm:text-base md:text-lg text-white leading-tight">
+                                المركز الدولي للدراسات والأبحاث الطبية والصيدلانية
+                            </span>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] sm:text-xs font-extrabold bg-gold-500/20 text-gold-300 border border-gold-400/50">
+                                <i class="fa-solid fa-award ml-1 text-gold-400"></i> قسم التدريب والتعليم المستمر
+                            </span>
+                            <span class="en-text text-[11px] font-semibold text-slate-300 hidden md:inline">
+                                | Department of Training &amp; Continuing Education
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- روابط التنقل السريع -->
+                <nav class="hidden xl:flex items-center gap-6 text-sm font-bold text-slate-200">
+                    <a href="#intro" class="hover:text-gold-400 transition-colors">أهمية التأهيل</a>
+                    <a href="#matrix" class="hover:text-gold-400 transition-colors">مصفوفة المسارات</a>
+                    <a href="#courses" class="hover:text-gold-400 transition-colors">الدليل التفصيلي (9 دورات)</a>
+                    <a href="#recommendations" class="hover:text-gold-400 transition-colors">توصيات الخريجين</a>
+                </nav>
+
+                <!-- زر التسجيل السريع -->
+                <div class="flex items-center gap-2">
+                    <button type="button" onclick="openRegisterModal('')" class="gold-gradient text-navy-950 font-extrabold text-xs sm:text-sm px-4 sm:px-5 py-2.5 rounded-xl shadow-gold hover:brightness-105 transition-all flex items-center gap-2 cursor-pointer">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>سجّل اهتمامك</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== HERO SECTION (القسم الرئيسي والنقوش الكيميائية والمميزات الست) ==================== -->
+    <section class="hero-pattern relative text-white pt-14 pb-20 sm:pt-20 sm:pb-28 overflow-hidden">
+        <!-- زخارف كيميائية وهندسية سداسية مستوحاة من الهوية البصرية -->
+        <svg class="absolute top-10 left-10 w-64 h-64 text-gold-400/15 pointer-events-none animate-float" viewBox="0 0 200 200" fill="none">
+            <polygon points="100,15 175,58 175,142 100,185 25,142 25,58" stroke="currentColor" stroke-width="2.2"/>
+            <polygon points="100,35 157,68 157,132 100,165 43,132 43,68" stroke="currentColor" stroke-width="1.5" stroke-dasharray="6 4"/>
+            <circle cx="100" cy="15" r="5" fill="currentColor"/>
+            <circle cx="175" cy="58" r="5" fill="currentColor"/>
+            <circle cx="175" cy="142" r="5" fill="currentColor"/>
+            <circle cx="100" cy="185" r="5" fill="currentColor"/>
+            <circle cx="25" cy="142" r="5" fill="currentColor"/>
+            <circle cx="25" cy="58" r="5" fill="currentColor"/>
+        </svg>
+        <svg class="absolute bottom-6 right-8 w-72 h-72 text-skybrand-500/15 pointer-events-none" viewBox="0 0 200 200" fill="none">
+            <polygon points="100,10 180,55 180,145 100,190 20,145 20,55" stroke="currentColor" stroke-width="2"/>
+            <line x1="100" y1="10" x2="100" y2="190" stroke="currentColor" stroke-width="1"/>
+            <line x1="20" y1="55" x2="180" y2="145" stroke="currentColor" stroke-width="1"/>
+            <line x1="180" y1="55" x2="20" y2="145" stroke="currentColor" stroke-width="1"/>
+        </svg>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <!-- شارة القسم العلوية -->
+                <div class="inline-flex flex-wrap items-center justify-center gap-2 bg-navy-950/75 border border-gold-400/50 rounded-full px-5 py-2 mb-6 shadow-lg">
+                    <span class="w-2.5 h-2.5 rounded-full bg-gold-400 animate-pulse"></span>
+                    <span class="text-xs sm:text-sm font-bold text-gold-300">قسم التدريب والتعليم المستمر</span>
+                    <span class="text-gold-400/60">|</span>
+                    <span class="en-text text-xs font-semibold text-slate-200">Consulting &amp; Training Division</span>
+                </div>
+
+                <!-- العنوان الرئيسي -->
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6 tracking-tight">
+                    الدليل الشامل لأهم الدورات التدريبية التأهيلية
+                    <span class="block gold-text-gradient mt-2">لخريجي الصيدلة</span>
+                </h1>
+
+                <!-- فاصل ذهبي بحلقة كيميائية سداسية مستوحى من الشعار -->
+                <div class="flex items-center justify-center gap-3 my-6 max-w-md mx-auto">
+                    <div class="h-[2px] flex-1 bg-gradient-to-l from-gold-400 to-transparent"></div>
+                    <svg class="w-8 h-8 text-gold-400 flex-shrink-0" viewBox="0 0 40 40" fill="none">
+                        <polygon points="20,4 34,12 34,28 20,36 6,28 6,12" stroke="currentColor" stroke-width="2.2" fill="rgba(212,175,55,0.15)"/>
+                        <circle cx="20" cy="4" r="2.5" fill="currentColor"/>
+                        <circle cx="34" cy="28" r="2.5" fill="currentColor"/>
+                        <circle cx="6" cy="28" r="2.5" fill="currentColor"/>
+                    </svg>
+                    <div class="h-[2px] flex-1 bg-gradient-to-r from-gold-400 to-transparent"></div>
+                </div>
+
+                <!-- العنوان الفرعي -->
+                <p class="text-base sm:text-lg md:text-xl text-slate-200 font-medium leading-relaxed max-w-3xl mx-auto mb-10">
+                    خارطة طريق تطبيقية متكاملة لسد الفجوة بين الدراسة الأكاديمية ومتطلبات سوق العمل المحلي والدولي، مصممة وفق أحدث المعايير العالمية في الرعاية السريرية والصناعات الدوائية.
+                </p>
+
+                <!-- أزرار الدعوة لاتخاذ إجراء -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+                    <a href="#courses" class="w-full sm:w-auto gold-gradient text-navy-950 font-extrabold text-base px-8 py-4 rounded-xl shadow-gold hover:scale-[1.02] transition-all flex items-center justify-center gap-3">
+                        <i class="fa-solid fa-book-medical text-lg"></i>
+                        <span>استعراض الدورات التسع التفصيلية</span>
+                    </a>
+                    <a href="#matrix" class="w-full sm:w-auto bg-white/10 hover:bg-white/15 text-white border border-gold-400/50 font-bold text-base px-8 py-4 rounded-xl backdrop-blur-sm transition-all flex items-center justify-center gap-3">
+                        <i class="fa-solid fa-table-list text-gold-300"></i>
+                        <span>مقارنة المسارات المهنية</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- شريط مميزات القسم الستة المستوحاة من البوستر الرسمي -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+                <div class="bg-white/95 text-navy-900 rounded-2xl p-4 sm:p-5 border-b-4 border-gold-500 shadow-lg flex items-center gap-4 hover:-translate-y-0.5 transition-transform">
+                    <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center text-xl flex-shrink-0">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-extrabold text-sm sm:text-base">برامج تدريبية متخصصة</h3>
+                        <p class="en-text text-xs text-slate-500 font-medium">Specialized Training Programs</p>
+                    </div>
+                </div>
+
+                <div class="bg-white/95 text-navy-900 rounded-2xl p-4 sm:p-5 border-b-4 border-gold-500 shadow-lg flex items-center gap-4 hover:-translate-y-0.5 transition-transform">
+                    <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center text-xl flex-shrink-0">
+                        <i class="fa-solid fa-flask-vial"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-extrabold text-sm sm:text-base">ورش عمل تطبيقية</h3>
+                        <p class="en-text text-xs text-slate-500 font-medium">Practical Workshops &amp; Case Studies</p>
+                    </div>
+                </div>
+
+                <div class="bg-white/95 text-navy-900 rounded-2xl p-4 sm:p-5 border-b-4 border-gold-500 shadow-lg flex items-center gap-4 hover:-translate-y-0.5 transition-transform">
+                    <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center text-xl flex-shrink-0">
+                        <i class="fa-solid fa-laptop-medical"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-extrabold text-sm sm:text-base">تدريب عن بُعد وحضوري</h3>
+                        <p class="en-text text-xs text-slate-500 font-medium">Online &amp; On-Site Training</p>
+                    </div>
+                </div>
+
+                <div class="bg-white/95 text-navy-900 rounded-2xl p-4 sm:p-5 border-b-4 border-gold-500 shadow-lg flex items-center gap-4 hover:-translate-y-0.5 transition-transform">
+                    <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center text-xl flex-shrink-0">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-extrabold text-sm sm:text-base">إصدار شهادات معتمدة</h3>
+                        <p class="en-text text-xs text-slate-500 font-medium">Certified Certificates</p>
+                    </div>
+                </div>
+
+                <div class="bg-white/95 text-navy-900 rounded-2xl p-4 sm:p-5 border-b-4 border-gold-500 shadow-lg flex items-center gap-4 hover:-translate-y-0.5 transition-transform">
+                    <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center text-xl flex-shrink-0">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-extrabold text-sm sm:text-base">محتوى مبني على أفضل الممارسات العالمية</h3>
+                        <p class="en-text text-xs text-slate-500 font-medium">Aligned with International Best Practices</p>
+                    </div>
+                </div>
+
+                <div class="bg-white/95 text-navy-900 rounded-2xl p-4 sm:p-5 border-b-4 border-gold-500 shadow-lg flex items-center gap-4 hover:-translate-y-0.5 transition-transform">
+                    <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center text-xl flex-shrink-0">
+                        <i class="fa-solid fa-users-gear"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-extrabold text-sm sm:text-base">فريق خبراء متعدد التخصصات</h3>
+                        <p class="en-text text-xs text-slate-500 font-medium">Multidisciplinary Expert Team</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 1: INTRODUCTION (أولاً: مقدمة وأهمية التأهيل المهني) ==================== -->
+    <section id="intro" class="py-16 sm:py-20 bg-white border-b border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-7">
+                    <div class="inline-flex items-center gap-2 text-gold-600 font-bold text-sm mb-2">
+                        <i class="fa-solid fa-compass"></i>
+                        <span>أولاً: مقدمة وأهمية التأهيل المهني لخريجي الصيدلة</span>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-navy-900 mb-6 leading-snug">
+                        أهمية التأهيل المهني المتخصص لخريجي الصيدلة في سوق العمل الحديث
+                    </h2>
+                    <p class="text-slate-700 text-base sm:text-lg leading-relaxed mb-6 text-justify">
+                        يشهد القطاع الصيدلاني والدوائي تطوراً متسارعاً وتنوعاً كبيراً في مجالات التوظيف؛ فلم يعد دور الصيدلي مقتصراً على الصرف التقليدي للدواء في صيدليات المجتمع، بل امتد ليشمل <strong>الرعاية السريرية المتقدمة</strong>، و<strong>الصناعات الدوائية وضمان الجودة</strong>، و<strong>التيقظ الدوائي</strong>، و<strong>الشؤون التنظيمية</strong>، و<strong>التسويق الدوائي الاحترافي</strong>، و<strong>إدارة سلاسل الإمداد</strong>.
+                    </p>
+                    <p class="text-slate-700 text-base sm:text-lg leading-relaxed mb-8 text-justify">
+                        يهدف هذا الدليل الصادر عن <strong>قسم التدريب والتعليم المستمر في المركز الدولي للدراسات والأبحاث الطبية والصيدلانية (ICMPSR)</strong> إلى تقديم توصيف تفصيلي لأهم الدورات التدريبية التأهيلية التي تمنح خريج الصيدلة الجاهزية الكاملة والميزة التنافسية للاندماج الفوري والناجح في سوق العمل.
+                    </p>
+
+                    <!-- إحصائيات سريعة للدليل -->
+                    <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200">
+                        <div class="text-center sm:text-right">
+                            <span class="block text-2xl sm:text-3xl font-black text-navy-900">9</span>
+                            <span class="text-xs sm:text-sm font-bold text-slate-600">مسارات تدريبية شاملة</span>
+                        </div>
+                        <div class="text-center sm:text-right">
+                            <span class="block text-2xl sm:text-3xl font-black text-gold-600">+380</span>
+                            <span class="text-xs sm:text-sm font-bold text-slate-600">ساعة تدريبية تطبيقية</span>
+                        </div>
+                        <div class="text-center sm:text-right">
+                            <span class="block text-2xl sm:text-3xl font-black text-skybrand-600">100%</span>
+                            <span class="text-xs sm:text-sm font-bold text-slate-600">مواءمة لسوق العمل</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- بطاقة القطاعات الصيدلانية -->
+                <div class="lg:col-span-5">
+                    <div class="bg-navy-900 text-white rounded-3xl p-6 sm:p-8 gold-border-glow relative overflow-hidden">
+                        <div class="absolute -left-10 -bottom-10 w-40 h-40 rounded-full bg-gold-500/10 blur-2xl"></div>
+                        <h3 class="text-xl font-extrabold text-gold-300 mb-5 flex items-center gap-2">
+                            <i class="fa-solid fa-network-wired"></i>
+                            <span>آفاق التوظيف الصيدلاني الحديثة</span>
+                        </h3>
+                        <ul class="space-y-3.5 text-sm sm:text-base">
+                            <li class="flex items-center gap-3 bg-white/5 p-3 rounded-xl border border-white/10">
+                                <span class="w-8 h-8 rounded-lg bg-gold-500/20 text-gold-300 flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-prescription-bottle-medical"></i></span>
+                                <span>صيدليات المجتمع والسلاسل الدوائية المتطورة</span>
+                            </li>
+                            <li class="flex items-center gap-3 bg-white/5 p-3 rounded-xl border border-white/10">
+                                <span class="w-8 h-8 rounded-lg bg-skybrand-500/20 text-skybrand-100 flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-hospital-user"></i></span>
+                                <span>المستشفيات وأقسام الرعاية السريرية والحرجة</span>
+                            </li>
+                            <li class="flex items-center gap-3 bg-white/5 p-3 rounded-xl border border-white/10">
+                                <span class="w-8 h-8 rounded-lg bg-gold-500/20 text-gold-300 flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-industry"></i></span>
+                                <span>مصانع الأدوية ومختبرات الرقابة وتوكيد الجودة</span>
+                            </li>
+                            <li class="flex items-center gap-3 bg-white/5 p-3 rounded-xl border border-white/10">
+                                <span class="w-8 h-8 rounded-lg bg-skybrand-500/20 text-skybrand-100 flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-file-shield"></i></span>
+                                <span>الهيئات الرقابية والشؤون التنظيمية والتيقظ الدوائي</span>
+                            </li>
+                            <li class="flex items-center gap-3 bg-white/5 p-3 rounded-xl border border-white/10">
+                                <span class="w-8 h-8 rounded-lg bg-gold-500/20 text-gold-300 flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-briefcase-medical"></i></span>
+                                <span>المكاتب العلمية والتسويق الدوائي وسلاسل الإمداد</span>
+                            </li>
+                            <li class="flex items-center gap-3 bg-white/5 p-3 rounded-xl border border-white/10">
+                                <span class="w-8 h-8 rounded-lg bg-skybrand-500/20 text-skybrand-100 flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-microscope"></i></span>
+                                <span>مراكز الأبحاث السريرية ودراسات التكافؤ الحيوي</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 2: PATHWAYS MATRIX TABLE (ثانياً: مصفوفة المسارات التدريبية) ==================== -->
+    <section id="matrix" class="py-16 sm:py-20 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="inline-block px-4 py-1 rounded-full bg-gold-100 text-gold-600 font-bold text-xs sm:text-sm border border-gold-400/40 mb-3">
+                    ثانياً: المقارنة الشاملة
+                </span>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-navy-900 mb-3">
+                    مصفوفة المسارات التدريبية ومجالات العمل المستهدفة
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base">
+                    انقر على أي دورة في الجدول أدناه لاستعراض محاورها التفصيلية ومخرجاتها المهنية مباشرة.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-navy border border-slate-200/90 overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-right border-collapse">
+                        <thead>
+                            <tr class="bg-navy-900 text-white text-xs sm:text-sm">
+                                <th class="py-4 px-5 font-extrabold border-b-2 border-gold-500 whitespace-nowrap">#</th>
+                                <th class="py-4 px-5 font-extrabold border-b-2 border-gold-500">اسم الدورة التدريبية</th>
+                                <th class="py-4 px-5 font-extrabold border-b-2 border-gold-500">المسار المهني المستهدف</th>
+                                <th class="py-4 px-5 font-extrabold border-b-2 border-gold-500 whitespace-nowrap">المدة المقترحة</th>
+                                <th class="py-4 px-5 font-extrabold border-b-2 border-gold-500">أبرز المخرجات العملية</th>
+                                <th class="py-4 px-5 font-extrabold border-b-2 border-gold-500 text-center">التفاصيل</th>
+                            </tr>
+                        </thead>
+                        <tbody id="matrixTableBody" class="divide-y divide-slate-200/80 text-xs sm:text-sm">
+                            <!-- يتم تعبئتها ديناميكياً عبر JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 3: DETAILED 9 COURSES (ثالثاً: الشرح التفصيلي للدورات التسع) ==================== -->
+    <section id="courses" class="py-16 sm:py-24 bg-white border-t border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="inline-block px-4 py-1 rounded-full bg-navy-900 text-gold-300 font-bold text-xs sm:text-sm mb-3">
+                    ثالثاً: التوصيف الأكاديمي والتطبيقي
+                </span>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-navy-900 mb-3">
+                    الشرح التفصيلي للدورات التدريبية التأهيلية
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base">
+                    اختر المسار المهني المناسب لك أو استخدم البحث السريع لاستكشاف المحاور التدريبية التفصيلية لكل برنامج.
+                </p>
+            </div>
+
+            <!-- شريط الفلترة والبحث التفاعلي -->
+            <div class="bg-surface p-4 sm:p-6 rounded-3xl border border-slate-200/90 mb-10 shadow-sm">
+                <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
+                    <!-- أزرار التصفية حسب المسارات -->
+                    <div id="filterTabs" class="flex flex-wrap items-center gap-2">
+                        <button type="button" data-filter="all" class="filter-btn active px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-navy-900 text-white shadow-sm cursor-pointer">
+                            الكل (9 دورات)
+                        </button>
+                        <button type="button" data-filter="clinical_community" class="filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-white text-navy-800 hover:bg-navy-900/5 border border-slate-200 cursor-pointer">
+                            الصيدلة السريرية والمجتمع
+                        </button>
+                        <button type="button" data-filter="industry_reg" class="filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-white text-navy-800 hover:bg-navy-900/5 border border-slate-200 cursor-pointer">
+                            التصنيع والجودة والتنظيم
+                        </button>
+                        <button type="button" data-filter="pv_marketing_supply" class="filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-white text-navy-800 hover:bg-navy-900/5 border border-slate-200 cursor-pointer">
+                            التيقظ والتسويق والإمداد
+                        </button>
+                        <button type="button" data-filter="research_nutrition" class="filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-white text-navy-800 hover:bg-navy-900/5 border border-slate-200 cursor-pointer">
+                            الأبحاث والتغذية والتركيبات
+                        </button>
+                    </div>
+
+                    <!-- مربع البحث الفوري -->
+                    <div class="relative w-full lg:w-80">
+                        <i class="fa-solid fa-magnifying-glass absolute right-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                        <input type="text" id="courseSearchInput" placeholder="ابحث باسم الدورة أو مصطلح (مثل: GMP, CTD)..."
+                               class="w-full bg-white border border-slate-300 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 rounded-xl py-2.5 pr-11 pl-4 text-sm text-navy-900 outline-none transition-all">
+                    </div>
+                </div>
+            </div>
+
+            <!-- شبكة بطاقات الدورات التسع -->
+            <div id="coursesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+                <!-- يتم توليد البطاقات عبر JavaScript -->
+            </div>
+
+            <!-- رسالة عدم وجود نتائج -->
+            <div id="noResultsMessage" class="hidden text-center py-14 bg-surface rounded-3xl border border-dashed border-slate-300">
+                <i class="fa-solid fa-folder-open text-4xl text-slate-400 mb-3"></i>
+                <h3 class="text-lg font-bold text-navy-900 mb-1">لم يتم العثور على دورات مطابقة لبحثك</h3>
+                <p class="text-sm text-slate-600 mb-4">جرب البحث بكلمات مفتاحية أخرى أو أعد ضبط الفلتر لعرض جميع الدورات.</p>
+                <button type="button" onclick="resetFilters()" class="bg-navy-900 text-white text-sm font-bold px-5 py-2.5 rounded-xl hover:bg-navy-800 transition-colors cursor-pointer">
+                    عرض جميع الدورات
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 4: RECOMMENDATIONS & ICMPSR PILLARS (رابعاً: توصيات عملية لخريج الصيدلة) ==================== -->
+    <section id="recommendations" class="py-16 sm:py-24 bg-surface border-t border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- رابعاً: توصيات عملية لخريج الصيدلة -->
+            <div class="mb-20">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="inline-block px-4 py-1 rounded-full bg-gold-100 text-gold-600 font-bold text-xs sm:text-sm border border-gold-400/40 mb-3">
+                        رابعاً: نصائح الخبراء
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-navy-900 mb-3">
+                        توصيات عملية لخريج الصيدلة عند اختيار الدورات
+                    </h2>
+                    <p class="text-slate-600 text-sm sm:text-base">
+                        خطوات استراتيجية لضمان تحقيق أقصى عائد مهني من استثمارك في التدريب والتأهيل المستمر.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- توصية 1 -->
+                    <div class="bg-white rounded-2xl p-6 gold-border-glow hover:-translate-y-1 transition-all duration-300 flex flex-col">
+                        <div class="flex items-center justify-between mb-5">
+                            <div class="w-12 h-12 rounded-2xl gold-gradient text-navy-950 flex items-center justify-center text-xl font-black shadow-sm">
+                                01
+                            </div>
+                            <div class="w-10 h-10 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center text-base">
+                                <i class="fa-solid fa-route"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-extrabold text-navy-900 mb-3">تحديد المسار المهني أولاً</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed flex-1">
+                            يُنصح باختيار حزمة الدورات بناءً على القطاع المستهدف (صيدليات المجتمع، المستشفيات، المصانع، أو التسويق) وتجنب التشتت.
+                        </p>
+                    </div>
+
+                    <!-- توصية 2 -->
+                    <div class="bg-white rounded-2xl p-6 gold-border-glow hover:-translate-y-1 transition-all duration-300 flex flex-col">
+                        <div class="flex items-center justify-between mb-5">
+                            <div class="w-12 h-12 rounded-2xl gold-gradient text-navy-950 flex items-center justify-center text-xl font-black shadow-sm">
+                                02
+                            </div>
+                            <div class="w-10 h-10 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center text-base">
+                                <i class="fa-solid fa-microscope"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-extrabold text-navy-900 mb-3">التركيز على الجانب التطبيقي</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed flex-1">
+                            تفضيل البرامج التدريبية التي تتضمن ورش عمل عملية، دراسة حالات سريرية، أو تدريباً ميدانياً داخل المؤسسات الصيدلانية.
+                        </p>
+                    </div>
+
+                    <!-- توصية 3 -->
+                    <div class="bg-white rounded-2xl p-6 gold-border-glow hover:-translate-y-1 transition-all duration-300 flex flex-col">
+                        <div class="flex items-center justify-between mb-5">
+                            <div class="w-12 h-12 rounded-2xl gold-gradient text-navy-950 flex items-center justify-center text-xl font-black shadow-sm">
+                                03
+                            </div>
+                            <div class="w-10 h-10 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center text-base">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-extrabold text-navy-900 mb-3">تطوير المهارات المساندة</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed flex-1">
+                            دمج الدورات التخصصية مع إتقان اللغة الإنجليزية الطبية، ومهارات الحاسوب وتحليل البيانات، وكتابة السيرة الذاتية الاحترافية.
+                        </p>
+                    </div>
+
+                    <!-- توصية 4 -->
+                    <div class="bg-white rounded-2xl p-6 gold-border-glow hover:-translate-y-1 transition-all duration-300 flex flex-col">
+                        <div class="flex items-center justify-between mb-5">
+                            <div class="w-12 h-12 rounded-2xl gold-gradient text-navy-950 flex items-center justify-center text-xl font-black shadow-sm">
+                                04
+                            </div>
+                            <div class="w-10 h-10 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center text-base">
+                                <i class="fa-solid fa-stamp"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-extrabold text-navy-900 mb-3">الاعتماد المهني</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed flex-1">
+                            الحرص على الحصول على شهادات تدريبية صادرة من جهات أكاديمية، نقابية، أو مراكز تدريب معتمدة ذات مصداقية لدى جهات التوظيف.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ركائز قسم التدريب والتعليم المستمر في ICMPSR -->
+            <div class="bg-navy-900 rounded-3xl p-8 sm:p-12 text-white relative overflow-hidden shadow-navy border-2 border-gold-500/40">
+                <div class="absolute top-0 right-0 w-full h-1.5 gold-gradient"></div>
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <span class="en-text text-xs font-bold tracking-widest uppercase text-gold-400 block mb-2">
+                        ICMPSR Training &amp; Continuing Education Excellence
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-black text-white">
+                        لماذا تتدرب في قسم التدريب والتعليم المستمر بـ <span class="text-gold-400">ICMPSR</span>؟
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-navy-800/80 border border-gold-400/25 rounded-2xl p-6 text-center">
+                        <div class="w-14 h-14 mx-auto rounded-full bg-gold-500/15 border border-gold-400 text-gold-400 flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <h3 class="font-bold text-base mb-1">تلبية احتياجات الجهات الصحية والدوائية</h3>
+                        <p class="en-text text-xs text-slate-300">Tailored to Health &amp; Pharma Sector Needs</p>
+                    </div>
+
+                    <div class="bg-navy-800/80 border border-gold-400/25 rounded-2xl p-6 text-center">
+                        <div class="w-14 h-14 mx-auto rounded-full bg-gold-500/15 border border-gold-400 text-gold-400 flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-clipboard-check"></i>
+                        </div>
+                        <h3 class="font-bold text-base mb-1">محتوى مبني على أفضل الممارسات العالمية</h3>
+                        <p class="en-text text-xs text-slate-300">Aligned with International Best Practices</p>
+                    </div>
+
+                    <div class="bg-navy-800/80 border border-gold-400/25 rounded-2xl p-6 text-center">
+                        <div class="w-14 h-14 mx-auto rounded-full bg-gold-500/15 border border-gold-400 text-gold-400 flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <h3 class="font-bold text-base mb-1">فريق خبراء متعدد التخصصات</h3>
+                        <p class="en-text text-xs text-slate-300">Multidisciplinary Expert Team</p>
+                    </div>
+
+                    <div class="bg-navy-800/80 border border-gold-400/25 rounded-2xl p-6 text-center">
+                        <div class="w-14 h-14 mx-auto rounded-full bg-gold-500/15 border border-gold-400 text-gold-400 flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3 class="font-bold text-base mb-1">تعزيز الجودة والامتثال التنظيمي</h3>
+                        <p class="en-text text-xs text-slate-300">Enhancing Quality &amp; Regulatory Compliance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER (تذييل الصفحة مع الشعار الدائري الأصلي) ==================== -->
+    <footer class="bg-navy-950 text-slate-300 pt-14 pb-8 border-t-4 border-gold-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-10 border-b border-white/10">
+                <div class="md:col-span-6">
+                    <div class="flex flex-wrap items-center gap-4 mb-4">
+                        <div class="w-20 h-20 rounded-full bg-white p-0.5 border-2 border-gold-400 shadow-gold flex-shrink-0 overflow-hidden">
+                            <img src="1000665943.png"
+                                 alt="شعار المركز الدولي للدراسات والأبحاث الطبية والصيدلانية ICMPSR"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/160x160/FFFFFF/062343?text=ICMPSR';"
+                                 class="w-full h-full object-cover rounded-full block">
+                        </div>
+                        <div>
+                            <span class="inline-block px-3.5 py-1 rounded-full text-xs font-extrabold bg-gold-500/20 text-gold-300 border border-gold-400/40 mb-2">
+                                قسم التدريب والتعليم المستمر
+                            </span>
+                            <h3 class="text-white font-bold text-lg leading-snug">
+                                المركز الدولي للدراسات والأبحاث الطبية والصيدلانية
+                            </h3>
+                            <p class="en-text text-xs text-gold-400 mt-0.5">
+                                International Center for Medical &amp; Pharmaceutical Studies and Research
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-400 leading-relaxed max-w-md">
+                        نعمل على بناء القدرات المؤسسية وتأهيل الكوادر الطبية والصيدلانية عبر برامج تدريبية تطبيقية واستشارات علمية وتنظيمية تواكب التطورات العالمية.
+                    </p>
+                </div>
+
+                <div class="md:col-span-3">
+                    <h4 class="text-white font-bold text-base mb-4 border-r-4 border-gold-500 pr-3">روابط الدليل السريعة</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#intro" class="hover:text-gold-400 transition-colors">مقدمة وأهمية التأهيل المهني</a></li>
+                        <li><a href="#matrix" class="hover:text-gold-400 transition-colors">مصفوفة المسارات التدريبية</a></li>
+                        <li><a href="#courses" class="hover:text-gold-400 transition-colors">الدورات التدريبية التسع</a></li>
+                        <li><a href="#recommendations" class="hover:text-gold-400 transition-colors">توصيات اختيار الدورات</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-3">
+                    <h4 class="text-white font-bold text-base mb-4 border-r-4 border-gold-500 pr-3">التسجيل والاستفسار</h4>
+                    <p class="text-sm text-slate-400 mb-3">
+                        هل ترغب في الالتحاق بأحد البرامج التدريبية أو طلب خطة تدريبية مخصصة لمؤسستك؟
+                    </p>
+                    <p class="en-text text-xs text-gold-300 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>icmpsr.center@gmail.com</span>
+                    </p>
+                    <button type="button" onclick="openRegisterModal('')" class="w-full gold-gradient text-navy-950 font-extrabold text-sm py-3 px-4 rounded-xl hover:brightness-105 transition-all cursor-pointer">
+                        تواصل مع قسم التدريب الآن
+                    </button>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+                <p>© <span id="currentYear">2026</span> المركز الدولي للدراسات والأبحاث الطبية والصيدلانية (ICMPSR) - قسم التدريب والتعليم المستمر. جميع الحقوق محفوظة.</p>
+                <p class="en-text">Department of Training &amp; Continuing Education | ICMPSR</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== MODAL 1: COURSE DETAILS MODAL (نافذة التفاصيل الكاملة للدورة) ==================== -->
+    <div id="courseDetailModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 modal-backdrop overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-3xl w-full shadow-2xl border-2 border-gold-500/50 overflow-hidden my-8">
+            <div class="bg-navy-900 text-white p-6 sm:p-7 relative">
+                <button type="button" onclick="closeDetailModal()" aria-label="إغلاق" class="absolute top-5 left-5 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors cursor-pointer">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+                <div class="flex items-center gap-2 text-gold-400 text-xs sm:text-sm font-bold mb-2">
+                    <span id="modalCourseNumber" class="px-2.5 py-0.5 rounded-md bg-gold-500/20 border border-gold-400/40"></span>
+                    <span id="modalCourseCategory"></span>
+                </div>
+                <h3 id="modalCourseTitleAr" class="text-xl sm:text-2xl font-black text-white leading-snug mb-1"></h3>
+                <p id="modalCourseTitleEn" class="en-text text-xs sm:text-sm text-gold-300 font-medium"></p>
+            </div>
+
+            <div class="p-6 sm:p-8 max-h-[72vh] overflow-y-auto space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-surface p-4 rounded-2xl border border-slate-200">
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs font-bold text-slate-500">الفئة المستهدفة</span>
+                            <p id="modalTargetAudience" class="text-sm font-bold text-navy-900 mt-0.5"></p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs font-bold text-slate-500">المدة التدريبية المقترحة</span>
+                            <p id="modalDuration" class="text-sm font-bold text-navy-900 mt-0.5"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-base font-extrabold text-navy-900 mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-bullseye text-gold-600"></i>
+                        <span>الهدف العام للدورة</span>
+                    </h4>
+                    <p id="modalGeneralObjective" class="text-slate-700 text-sm sm:text-base leading-relaxed bg-gold-100/60 border-r-4 border-gold-500 p-4 rounded-xl"></p>
+                </div>
+
+                <div>
+                    <h4 class="text-base font-extrabold text-navy-900 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-list-check text-skybrand-600"></i>
+                        <span>المحاور التدريبية التفصيلية</span>
+                    </h4>
+                    <ul id="modalSyllabusList" class="space-y-2.5">
+                        <!-- يتم تعبئتها ديناميكياً -->
+                    </ul>
+                </div>
+
+                <div class="bg-navy-900 text-white p-5 rounded-2xl border border-gold-400/40">
+                    <h4 class="text-sm font-extrabold text-gold-300 mb-1.5 flex items-center gap-2">
+                        <i class="fa-solid fa-award"></i>
+                        <span>المخرج المهني المتوقع</span>
+                    </h4>
+                    <p id="modalExpectedOutcome" class="text-sm sm:text-base text-slate-100 leading-relaxed"></p>
+                </div>
+            </div>
+
+            <div class="bg-surface px-6 py-4 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <button type="button" onclick="closeDetailModal()" class="w-full sm:w-auto px-5 py-2.5 rounded-xl border border-slate-300 text-slate-700 font-bold text-sm hover:bg-slate-100 transition-colors cursor-pointer">
+                    إغلاق النافذة
+                </button>
+                <button type="button" id="modalRegisterBtn" class="w-full sm:w-auto gold-gradient text-navy-950 font-extrabold text-sm px-6 py-3 rounded-xl shadow-gold hover:brightness-105 transition-all flex items-center justify-center gap-2 cursor-pointer">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>سجل في هذه الدورة الآن</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== MODAL 2: REGISTRATION / INQUIRY MODAL (نموذج التسجيل والإرسال المباشر) ==================== -->
+    <div id="registerModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 modal-backdrop overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-lg w-full shadow-2xl border-2 border-gold-500/50 overflow-hidden my-8">
+            <div class="bg-navy-900 text-white p-6 relative">
+                <button type="button" onclick="closeRegisterModal()" aria-label="إغلاق" class="absolute top-5 left-5 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors cursor-pointer">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <span class="text-xs font-bold text-gold-400 block mb-1">قسم التدريب والتعليم المستمر - ICMPSR</span>
+                <h3 class="text-xl font-black">نموذج تسجيل الاهتمام والاستفسار</h3>
+                <p class="en-text text-xs text-slate-300 mt-1 flex items-center gap-1.5">
+                    <i class="fa-solid fa-envelope text-gold-400"></i>
+                    <span>icmpsr.center@gmail.com</span>
+                </p>
+            </div>
+
+            <form id="registrationForm" onsubmit="handleFormSubmit(event)" class="p-6 sm:p-7 space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-navy-900 mb-1.5">الاسم الكامل <span class="text-red-500">*</span></label>
+                    <input type="text" id="regName" required placeholder="د. / الصيدلي ..."
+                           class="w-full bg-surface border border-slate-300 focus:border-gold-500 rounded-xl px-4 py-2.5 text-sm outline-none">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold text-navy-900 mb-1.5">رقم الهاتف / واتساب <span class="text-red-500">*</span></label>
+                        <input type="tel" id="regPhone" required placeholder="مثال: 002010xxxxxxxx"
+                               class="w-full bg-surface border border-slate-300 focus:border-gold-500 rounded-xl px-4 py-2.5 text-sm outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-navy-900 mb-1.5">البريد الإلكتروني للمتدرب <span class="text-red-500">*</span></label>
+                        <input type="email" id="regEmail" required placeholder="name@example.com"
+                               class="w-full bg-surface border border-slate-300 focus:border-gold-500 rounded-xl px-4 py-2.5 text-sm outline-none en-text text-right">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-navy-900 mb-1.5">الدورة التدريبية المختارة <span class="text-red-500">*</span></label>
+                    <select id="regCourseSelect" required class="w-full bg-surface border border-slate-300 focus:border-gold-500 rounded-xl px-4 py-2.5 text-sm font-bold text-navy-900 outline-none">
+                        <!-- يتم تعبئتها ديناميكياً -->
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-navy-900 mb-1.5">نظام التدريب المفضل</label>
+                    <div class="grid grid-cols-3 gap-2.5">
+                        <label class="flex items-center justify-center gap-1.5 p-2.5 rounded-xl border border-slate-300 bg-surface cursor-pointer has-[:checked]:border-gold-500 has-[:checked]:bg-gold-100/60">
+                            <input type="radio" name="trainingMode" value="تدريب عن بُعد (Online)" checked class="accent-navy-900">
+                            <span class="text-xs font-bold text-navy-900">عن بُعد</span>
+                        </label>
+                        <label class="flex items-center justify-center gap-1.5 p-2.5 rounded-xl border border-slate-300 bg-surface cursor-pointer has-[:checked]:border-gold-500 has-[:checked]:bg-gold-100/60">
+                            <input type="radio" name="trainingMode" value="تدريب حضوري (On-Site)" class="accent-navy-900">
+                            <span class="text-xs font-bold text-navy-900">حضوري</span>
+                        </label>
+                        <label class="flex items-center justify-center gap-1.5 p-2.5 rounded-xl border border-slate-300 bg-surface cursor-pointer has-[:checked]:border-gold-500 has-[:checked]:bg-gold-100/60">
+                            <input type="radio" name="trainingMode" value="نظام هجين (Hybrid)" class="accent-navy-900">
+                            <span class="text-xs font-bold text-navy-900">هجين</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-navy-900 mb-1.5">ملاحظات أو استفسارات إضافية (اختياري)</label>
+                    <textarea id="regNotes" rows="2" placeholder="اكتب أي استفسار حول المواعيد، الرسوم، أو الشهادات المعتمدة..."
+                              class="w-full bg-surface border border-slate-300 focus:border-gold-500 rounded-xl px-4 py-2 text-sm outline-none resize-none"></textarea>
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" class="w-full gold-gradient text-navy-950 font-extrabold text-sm py-3.5 rounded-xl shadow-gold hover:brightness-105 transition-all flex items-center justify-center gap-2 cursor-pointer">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>إرسال طلب التسجيل عبر البريد الإلكتروني</span>
+                    </button>
+                </div>
+            </form>
+
+            <!-- صندوق التأكيد والنسخ اليدوي في حال عدم فتح تطبيق البريد تلقائياً -->
+            <div id="registrationSuccess" class="hidden p-6 sm:p-8 text-center space-y-4">
+                <div class="w-16 h-16 mx-auto rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-3xl">
+                    <i class="fa-solid fa-envelope-circle-check"></i>
+                </div>
+                <h4 class="text-xl font-black text-navy-900">تم تجهيز رسالة الطلب وإطلاق تطبيق البريد!</h4>
+                <p id="successSummaryText" class="text-sm text-slate-600 leading-relaxed"></p>
+
+                <div class="bg-surface border border-slate-200 rounded-2xl p-4 text-right space-y-3">
+                    <p class="text-xs font-bold text-navy-900 flex items-center gap-1.5">
+                        <i class="fa-solid fa-circle-info text-gold-600"></i>
+                        <span>في حال عدم فتح تطبيق البريد تلقائياً على جهازك:</span>
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+                        <a id="directMailtoLink" href="mailto:icmpsr.center@gmail.com" class="flex-1 bg-navy-900 hover:bg-navy-800 text-white text-xs font-bold py-2.5 px-3 rounded-xl text-center transition-colors flex items-center justify-center gap-1.5">
+                            <i class="fa-solid fa-up-right-from-square text-gold-400"></i>
+                            <span>فتح البريد مرة أخرى</span>
+                        </a>
+                        <button type="button" onclick="copyRequestDetails()" id="copyRequestBtn" class="flex-1 bg-gold-100 hover:bg-gold-200 text-navy-950 border border-gold-400/60 text-xs font-extrabold py-2.5 px-3 rounded-xl transition-colors flex items-center justify-center gap-1.5 cursor-pointer">
+                            <i class="fa-regular fa-copy"></i>
+                            <span>نسخ نص الطلب للإرسال اليدوي</span>
+                        </button>
+                    </div>
+                    <textarea id="generatedEmailBody" readonly rows="5" class="w-full bg-white border border-slate-200 rounded-xl p-2.5 text-xs text-slate-700 leading-relaxed outline-none resize-none"></textarea>
+                </div>
+
+                <div class="pt-1">
+                    <button type="button" onclick="closeRegisterModal()" class="text-slate-600 hover:text-navy-900 font-bold text-sm px-6 py-2 rounded-xl hover:bg-slate-100 transition-colors cursor-pointer">
+                        العودة إلى الدليل
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== JAVASCRIPT DATA & INTERACTIVITY ==================== -->
+    <script>
+        // البيانات الكاملة للدورات التدريبية التسع لخريجي الصيدلة
+        const coursesData = [
+            {
+                id: 1,
+                numberLabel: "الدورة الأولى",
+                category: "clinical_community",
+                categoryLabel: "الصيدلة السريرية والمجتمع",
+                icon: "fa-prescription-bottle-medical",
+                titleAr: "ممارسة صيدلة المجتمع المتقدمة والاستشارة الدوائية",
+                titleEn: "Advanced Community Pharmacy Practice",
+                matrixPathway: "صيدليات المجتمع والسلاسل الدوائية",
+                matrixDuration: "40 - 60 ساعة",
+                matrixOutputs: "قراءة الوصفات، الاستشارة الدوائية، إدارة التداخلات، صرف OTC",
+                targetAudience: "خريجو الصيدلة الراغبون في العمل بصيدليات المجتمع، السلاسل الصيدلانية، أو تأسيس صيدلياتهم الخاصة.",
+                detailedDuration: "50 ساعة تدريبية (20 ساعة نظري + 30 ساعة تدريب عملي ومحاكاة داخل الصيدلية).",
+                generalObjective: "تأهيل الصيدلي لإدارة الصيدلية باحترافية، وفهم الأسماء التجارية والبدائل العلمية، وتقديم استشارة دوائية آمنة ومبنية على الدليل العلمي.",
+                syllabus: [
+                    "فك رموز الوصفات الطبية وتجنب أخطاء الصرف الناتجة عن تشابه الأسماء الدوائية (LASA).",
+                    "بروتوكولات صرف الأدوية اللاوصفية (OTC) للحالات الشائعة (نزلات البرد، الحساسية، الجهاز الهضمي، الجلدية).",
+                    "الكشف السريع عن التداخلات الدوائية (Drug-Drug & Drug-Food Interactions) وموانع الاستعمال.",
+                    "التعامل مع الفئات الخاصة: الحوامل، المرضعات، الأطفال، وكبار السن، وحساب الجرعات بدقة.",
+                    "مهارات التواصل الفعال مع المريض، شرح طريقة استخدام الأجهزة الطبية (البخاخات، أقلام الإنسولين، أجهزة الضغط).",
+                    "أساسيات إدارة الصيدلية، نظام الجرد، واستخدام أنظمة نقاط البيع الصيدلانية (POS)."
+                ],
+                expectedOutcome: "قدرة الخريج على العمل كصيدلي مسؤول بكفاءة عالية، ورفع جودة الرعاية الصيدلانية المقدمة للمرضى."
+            },
+            {
+                id: 2,
+                numberLabel: "الدورة الثانية",
+                category: "clinical_community",
+                categoryLabel: "الصيدلة السريرية والمجتمع",
+                icon: "fa-hospital-user",
+                titleAr: "أساسيات الصيدلة السريرية والعلاج الدوائي التطبيقي",
+                titleEn: "Clinical Pharmacy & Pharmacotherapy",
+                matrixPathway: "المستشفيات والمراكز الطبية المتخصصة",
+                matrixDuration: "60 - 80 ساعة",
+                matrixOutputs: "تحليل الملف الطبي، تعديل الجرعات، الرعاية الحرجة، منع الأخطاء الدوائية",
+                targetAudience: "الصيادلة الراغبون في العمل بالمستشفيات، أقسام الرعاية الحرجة، والمراكز الطبية التخصصية.",
+                detailedDuration: "70 ساعة تدريبية (35 ساعة نظري + 35 ساعة دراسة حالات سريرية Clinical Case Studies).",
+                generalObjective: "تمكين الصيدلي من المشاركة الفاعلة ضمن الفريق الطبي، ومراجعة الخطط العلاجية للمرضى المنومين لتحقيق أقصى فعالية وأقل سمية.",
+                syllabus: [
+                    "قراءة وتفسير الفحوصات المخبرية ووظائف الأعضاء (وظائف الكلى، الكبد، صورة الدم، الشوارد، غازات الدم).",
+                    "تعديل الجرعات الدوائية لمرضى القصور الكلوي والكبدي (Renal & Hepatic Dose Adjustment).",
+                    "العلاج الدوائي المبني على الدليل العلمي لأمراض القلب والأوعية الدموية، السكري، والجهاز التنفسي.",
+                    "برامج الإشراف على المضادات الحيوية (Antimicrobial Stewardship) واختيار المضاد الأمثل بناءً على المزارع البكتيرية.",
+                    "مراقبة مستوى الدواء في الدم (Therapeutic Drug Monitoring - TDM) للأدوية ضيقة الهامش العلاجي.",
+                    "اكتشاف ومنع الأخطاء الدوائية (Medication Reconciliation & Error Prevention) أثناء الدخول والخروج من المستشفى."
+                ],
+                expectedOutcome: "إعداد خطط رعاية صيدلانية متكاملة (Pharmaceutical Care Plans) وتقديم توصيات علاجية دقيقة للأطباء."
+            },
+            {
+                id: 3,
+                numberLabel: "الدورة الثالثة",
+                category: "industry_reg",
+                categoryLabel: "التصنيع والجودة والتنظيم",
+                icon: "fa-industry",
+                titleAr: "ممارسات التصنيع الدوائي الجيد وضمان الجودة",
+                titleEn: "GMP & Quality Assurance",
+                matrixPathway: "مصانع الأدوية ومختبرات الرقابة",
+                matrixDuration: "45 - 60 ساعة",
+                matrixOutputs: "تطبيق معايير GMP، كتابة SOPs، التحقق من الجودة، التفتيش الداخلي",
+                targetAudience: "الخريجون المتطلعون للعمل في مصانع الأدوية، أقسام الإنتاج، ضمان الجودة (QA)، ورقابة الجودة (QC).",
+                detailedDuration: "50 ساعة تدريبية (مع زيارات ميدانية أو محاكاة لخطوط الإنتاج ومختبرات التحليل).",
+                generalObjective: "إكساب المتدرب المعرفة التطبيقية بمعايير التصنيع الدوائي المعتمدة من منظمة الصحة العالمية (WHO) وهيئة الغذاء والدواء (FDA).",
+                syllabus: [
+                    "المبادئ الأساسية لممارسات التصنيع الجيد (cGMP) والفرق الجوهري بين ضمان الجودة (QA) ورقابة الجودة (QC).",
+                    "نظام التوثيق الدوائي: كتابة ومراجعة إجراءات التشغيل القياسية (SOPs) وسجلات التشغيلات (Batch Manufacturing Records).",
+                    "عمليات التحقق والتأهيل (Validation & Qualification) للأجهزة، والعمليات الإنتاجية، وطرق التحليل.",
+                    "إدارة الانحرافات (Deviations)، الإجراءات التصحيحية والوقائية (CAPA)، وإدارة التغيير (Change Control).",
+                    "مبادئ ممارسات المختبرات الجيدة (GLP) وأساسيات التحليل الآلي (HPLC, UV-Vis, Dissolution).",
+                    "إجراءات التفتيش الداخلي (Self-Inspection) والاستعداد للتدقيق الخارجي من الجهات الرقابية."
+                ],
+                expectedOutcome: "الجاهزية الكاملة للعمل في خطوط الإنتاج الدوائي، مختبرات الرقابة، وأقسام توكيد الجودة."
+            },
+            {
+                id: 4,
+                numberLabel: "الدورة الرابعة",
+                category: "industry_reg",
+                categoryLabel: "التصنيع والجودة والتنظيم",
+                icon: "fa-file-signature",
+                titleAr: "الشؤون التنظيمية وتسجيل المستحضرات الصيدلانية",
+                titleEn: "Pharmaceutical Regulatory Affairs",
+                matrixPathway: "الشركات الدوائية والهيئات الرقابية",
+                matrixDuration: "35 - 45 ساعة",
+                matrixOutputs: "إعداد ملفات CTD/eCTD، متطلبات التسجيل، التغييرات الدوائية",
+                targetAudience: "الصيادلة الراغبون في العمل بأقسام التسجيل الدوائي في الشركات المصنعة، المكاتب العلمية، والهيئات الرقابية.",
+                detailedDuration: "40 ساعة تدريبية تطبيقية على إعداد ملفات التسجيل.",
+                generalObjective: "تأهيل الصيدلي لإعداد وتقييم ملفات تسجيل الأدوية والمستحضرات الحيوية والمكملات وفق المعايير الدولية (ICH).",
+                syllabus: [
+                    "الإطار التشريعي والرقابي لتسجيل الأدوية محلياً وإقليمياً ودولياً.",
+                    "الهيكل التفصيلي للملف الفني الموحد (CTD - Common Technical Document) وحداته الخمس (Modules 1-5).",
+                    "متطلبات الملف الفني الموحد الإلكتروني (eCTD) وآلية التقديم عبر المنصات الرقمية.",
+                    "إعداد ومراجعة نشرات المعلومات الدوائية (SPC & PIL) وتصميم العبوات (Artwork & Labeling).",
+                    "متطلبات تسجيل الأدوية الجنيسة (Generic Drugs) والتكافؤ الحيوي، ومتابعة التغييرات بعد التسجيل (Variations & Renewals)."
+                ],
+                expectedOutcome: "القدرة على تجميع وتدقيق ملفات تسجيل الأدوية ومتابعة إجراءات الترخيص والتسعير بكفاءة."
+            },
+            {
+                id: 5,
+                numberLabel: "الدورة الخامسة",
+                category: "pv_marketing_supply",
+                categoryLabel: "التيقظ والتسويق والإمداد",
+                icon: "fa-shield-heart",
+                titleAr: "التيقظ الدوائي وسلامة الدواء",
+                titleEn: "Pharmacovigilance & Drug Safety",
+                matrixPathway: "مراكز التيقظ وشركات الأدوية",
+                matrixDuration: "30 - 40 ساعة",
+                matrixOutputs: "رصد الآثار الجانبية (ADRs)، إعداد تقارير ICSR و PSUR، إدارة المخاطر",
+                targetAudience: "الصيادلة في الشركات الدوائية، المستشفيات، ومراكز الرصد الدوائي الوطنية.",
+                detailedDuration: "35 ساعة تدريبية (تتضمن ورش عمل لتعبئة النماذج وتحليل الإشارات).",
+                generalObjective: "بناء مهارات رصد وتقييم والوقاية من الآثار الجانبية للأدوية لضمان مأمونية المستحضرات بعد التسويق.",
+                syllabus: [
+                    "مفاهيم التيقظ الدوائي، تصنيف التفاعلات الدوائية الضارة (ADRs)، والفرق بينها وبين الآثار الجانبية والأحداث الضارة (AEs).",
+                    "إعداد وتقييم تقارير الحالات الفردية للسلامة (ICSR) واستخدام معايير الترميز الطبي (MedDRA).",
+                    "إعداد التقارير الدورية المحدثة للسلامة (PSUR / PBRER) وخطط إدارة المخاطر (Risk Management Plans - RMP).",
+                    "آليات اكتشاف الإشارات التحذيرية (Signal Detection) وتقييم العلاقة السببية (Causality Assessment).",
+                    "دور الشخص المؤهل للتيقظ الدوائي (QPPV) ومتطلبات الامتثال لممارسات التيقظ الجيدة (GVP)."
+                ],
+                expectedOutcome: "العمل كمسؤول تيقظ دوائي في الشركات الدوائية أو منسق سلامة دوائية في المستشفيات."
+            },
+            {
+                id: 6,
+                numberLabel: "الدورة السادسة",
+                category: "pv_marketing_supply",
+                categoryLabel: "التيقظ والتسويق والإمداد",
+                icon: "fa-user-tie",
+                titleAr: "التسويق الدوائي ومهارات الدعاية الطبية الاحترافية",
+                titleEn: "Pharmaceutical Marketing & Medical Detailing",
+                matrixPathway: "المكاتب العلمية وشركات التوزيع",
+                matrixDuration: "30 - 40 ساعة",
+                matrixOutputs: "الترويج العلمي للأدوية، تحليل السوق، مهارات التفاوض والإقناع",
+                targetAudience: "الخريجون الراغبون في العمل كمندوبي دعاية طبية (Medical Representatives)، مشرفي مبيعات، أو أخصائيي تسويق دوائي.",
+                detailedDuration: "35 ساعة تدريبية (تركز على المحاكاة ولعب الأدوار Role-Play).",
+                generalObjective: "تحويل المعرفة العلمية للصيدلي إلى مهارات تواصل وتسويق أخلاقي وعلمي مقنع للأطباء والصيادلة.",
+                syllabus: [
+                    "أساسيات التسويق الدوائي وتحليل السوق والمنافسين (Market Segmentation & Targeting).",
+                    "خطوات الزيارة الطبية الناجحة (Opening, Probing, Handling Objections, Closing).",
+                    "مهارات العرض العلمي للأدوية (Scientific Detailing) وقراءة الدراسات السريرية لدعم المنتج.",
+                    "إدارة المناطق البيعية (Territory Management)، التخطيط اليومي، وبناء العلاقات المهنية المستدامة.",
+                    "أخلاقيات الترويج الدوائي ومواثيق الممارسة التسويقية المعتمدة."
+                ],
+                expectedOutcome: "التميز في مقابلات التوظيف لشركات الأدوية وتحقيق مستهدفات الترويج العلمي والبيعي باحترافية."
+            },
+            {
+                id: 7,
+                numberLabel: "الدورة السابعة",
+                category: "pv_marketing_supply",
+                categoryLabel: "التيقظ والتسويق والإمداد",
+                icon: "fa-truck-medical",
+                titleAr: "إدارة سلاسل الإمداد وممارسات التوزيع الجيد",
+                titleEn: "Supply Chain & Good Distribution Practice - GDP",
+                matrixPathway: "مستودعات الأدوية وشركات الإمداد",
+                matrixDuration: "25 - 35 ساعة",
+                matrixOutputs: "التوزيع الجيد (GDP)، سلسلة التبريد، إدارة المخزون وتجنب الهدر",
+                targetAudience: "الصيادلة العاملون في مستودعات الأدوية، شركات الاستيراد والتوزيع، وإدارات المشتريات الدوائية.",
+                detailedDuration: "30 ساعة تدريبية.",
+                generalObjective: "ضمان الحفاظ على جودة وفعالية الأدوية خلال مراحل النقل والتخزين والتوزيع حتى وصولها للمريض.",
+                syllabus: [
+                    "المعايير الدولية لممارسات التوزيع والتخزين الجيد (GDP & GSP).",
+                    "إدارة سلسلة التبريد (Cold Chain Management) للأدوية البيولوجية واللقاحات ومراقبة درجات الحرارة والرطوبة.",
+                    "تخطيط الطلب، إدارة المخزون الدوائي، وتطبيق أنظمة (FEFO / FIFO) لتقليل الهدر وانتهاء الصلاحية.",
+                    "آليات سحب التشغيلات الدوائية (Product Recall) والتعامل مع الأدوية المرتجعة والمزيفة."
+                ],
+                expectedOutcome: "إدارة المستودعات الدوائية وسلاسل الإمداد وفق الاشتراطات الرقابية الصارمة."
+            },
+            {
+                id: 8,
+                numberLabel: "الدورة الثامنة",
+                category: "research_nutrition",
+                categoryLabel: "الأبحاث والتغذية والتركيبات",
+                icon: "fa-microscope",
+                titleAr: "الدراسات السريرية والتكافؤ الحيوي",
+                titleEn: "Clinical Trials & Bioequivalence Studies",
+                matrixPathway: "مراكز الأبحاث الدوائية والجامعات",
+                matrixDuration: "40 - 50 ساعة",
+                matrixOutputs: "مبادئ الممارسة السريرية الجيدة (GCP)، تصميم دراسات التكافؤ الحيوي",
+                targetAudience: "الصيادلة المهتمون بالبحث العلمي السريري، مراكز التكافؤ الحيوي، وشركات الأبحاث التعاقدية (CROs).",
+                detailedDuration: "45 ساعة تدريبية.",
+                generalObjective: "تأهيل الصيدلي للمشاركة في تصميم وإدارة ومراقبة الدراسات السريرية ودراسات التكافؤ الحيوي وفق المعايير الأخلاقية والعلمية.",
+                syllabus: [
+                    "مبادئ الممارسة السريرية الجيدة (ICH-GCP) وأخلاقيات البحث العلمي على الإنسان.",
+                    "مراحل تطوير الدواء الجديدة (Phases I - IV) وأدوار الباحث الرئيسي ومنسق الدراسات السريرية (CRC / CRA).",
+                    "أسس تصميم دراسات التكافؤ الحيوي (Bioequivalence Studies) ومعايير الحرائك الدوائية (Cmax, AUC, Tmax).",
+                    "إعداد بروتوكول الدراسة، نماذج الموافقة المستنيرة (Informed Consent)، وإدارة البيانات السريرية."
+                ],
+                expectedOutcome: "العمل كمنسق أبحاث سريرية (CRC) أو مراقب دراسات سريرية (CRA) في مراكز الأبحاث وشركات الأدوية."
+            },
+            {
+                id: 9,
+                numberLabel: "الدورة التاسعة",
+                category: "research_nutrition",
+                categoryLabel: "الأبحاث والتغذية والتركيبات",
+                icon: "fa-mortar-pestle",
+                titleAr: "التغذية العلاجية والتركيبات الصيدلانية",
+                titleEn: "Clinical Nutrition & Pharmaceutical Compounding",
+                matrixPathway: "المستشفيات وصيدليات التركيبات",
+                matrixDuration: "30 - 40 ساعة",
+                matrixOutputs: "التغذية الوريدية والأنبوبية (TPN/EN)، تحضير التركيبات الصيدلانية",
+                targetAudience: "صيادلة المستشفيات وصيدليات التركيبات الخاصة ومراكز الرعاية الصحية.",
+                detailedDuration: "35 ساعة تدريبية (تتضمن تطبيقات حسابية وعملية).",
+                generalObjective: "إتقان الحسابات الصيدلانية الدقيقة، وتحضير التركيبات غير المتوفرة تجارياً، وتصميم أنظمة التغذية الوريدية والأنبوبية.",
+                syllabus: [
+                    "تقييم الحالة التغذوية للمرضى وحساب الاحتياجات اليومية من السعرات والبروتينات والسوائل.",
+                    "أساسيات التغذية الأنبوبية (Enteral Nutrition) والتغذية الوريدية الكاملة (TPN) وحساب التوافق الكيميائي.",
+                    "ممارسات التحضير المعقم (Aseptic Technique) والتعامل الآمن مع الأدوية السامة للخلايا (Chemotherapy).",
+                    "التركيبات الصيدلانية الموضعية والفموية (Extemporaneous Compounding) وضبط ثباتيتها وصلاحيتها."
+                ],
+                expectedOutcome: "القدرة على تحضير التركيبات الدوائية الدقيقة والمشاركة في وحدات التغذية العلاجية وتحضير المحاليل الوريدية."
+            }
+        ];
+
+        let currentFilter = 'all';
+        let currentSearch = '';
+
+        // تهيئة المكونات التفاعلية بعد اكتمال تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', () => {
+            try {
+                renderMatrixTable();
+                renderCoursesGrid();
+                populateCourseSelect();
+                setupEventListeners();
+            } catch (error) {
+                console.error('Error initializing ICMPSR training guide:', error);
+            }
+        });
+
+        // عرض جدول مصفوفة المسارات التدريبية
+        function renderMatrixTable() {
+            const tbody = document.getElementById('matrixTableBody');
+            if (!tbody) return;
+            tbody.innerHTML = coursesData.map((course, idx) => `
+                <tr onclick="scrollToAndOpenCourse(${course.id})"
+                    class="hover:bg-gold-100/60 transition-colors cursor-pointer group ${idx % 2 === 0 ? 'bg-white' : 'bg-surface/60'}">
+                    <td class="py-4 px-5 font-black text-gold-600">${course.id}</td>
+                    <td class="py-4 px-5 font-extrabold text-navy-900 group-hover:text-skybrand-600 transition-colors">
+                        ${course.titleAr}
+                        <span class="block en-text text-[11px] font-medium text-slate-400 mt-0.5">${course.titleEn}</span>
+                    </td>
+                    <td class="py-4 px-5 font-semibold text-slate-700">${course.matrixPathway}</td>
+                    <td class="py-4 px-5 whitespace-nowrap">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-navy-900/5 text-navy-900 border border-navy-900/15">
+                            <i class="fa-regular fa-clock text-gold-600"></i> ${course.matrixDuration}
+                        </span>
+                    </td>
+                    <td class="py-4 px-5 text-slate-600">${course.matrixOutputs}</td>
+                    <td class="py-4 px-5 text-center">
+                        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gold-100 text-gold-600 group-hover:bg-navy-900 group-hover:text-gold-400 transition-colors">
+                            <i class="fa-solid fa-arrow-left text-xs"></i>
+                        </span>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        // عرض بطاقات الدورات التسع وفق التصفية والبحث الحاليين
+        function renderCoursesGrid() {
+            const grid = document.getElementById('coursesGrid');
+            const noResults = document.getElementById('noResultsMessage');
+            if (!grid || !noResults) return;
+
+            const filtered = coursesData.filter(course => {
+                const matchesFilter = currentFilter === 'all' || course.category === currentFilter;
+                const searchLower = currentSearch.trim().toLowerCase();
+                const matchesSearch = !searchLower ||
+                    course.titleAr.toLowerCase().includes(searchLower) ||
+                    course.titleEn.toLowerCase().includes(searchLower) ||
+                    course.targetAudience.toLowerCase().includes(searchLower) ||
+                    course.syllabus.some(item => item.toLowerCase().includes(searchLower));
+                return matchesFilter && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '';
+                noResults.classList.remove('hidden');
+                return;
+            }
+
+            noResults.classList.add('hidden');
+            grid.innerHTML = filtered.map(course => `
+                <article id="course-card-${course.id}" class="bg-white rounded-3xl border border-slate-200 hover:border-gold-500 shadow-sm hover:shadow-navy transition-all duration-300 flex flex-col overflow-hidden group">
+                    <div class="bg-navy-900 text-white p-6 relative overflow-hidden">
+                        <div class="absolute -left-6 -top-6 w-24 h-24 rounded-full bg-gold-500/10 group-hover:scale-125 transition-transform duration-500"></div>
+                        <div class="flex items-center justify-between gap-2 mb-3 relative z-10">
+                            <span class="px-3 py-1 rounded-lg text-xs font-extrabold bg-gold-500/20 text-gold-300 border border-gold-400/40">
+                                ${course.numberLabel}
+                            </span>
+                            <div class="w-10 h-10 rounded-xl bg-white/10 text-gold-400 flex items-center justify-center text-lg">
+                                <i class="fa-solid ${course.icon}"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-black leading-snug mb-1.5 relative z-10 group-hover:text-gold-300 transition-colors">
+                            ${course.titleAr}
+                        </h3>
+                        <p class="en-text text-xs text-slate-300 font-medium relative z-10">
+                            ${course.titleEn}
+                        </p>
+                    </div>
+
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-5">
+                        <div class="space-y-4">
+                            <div class="flex flex-wrap items-center gap-2 text-xs">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full font-bold bg-gold-100 text-gold-600">
+                                    <i class="fa-regular fa-clock"></i> ${course.detailedDuration.split('(')[0].trim()}
+                                </span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full font-bold bg-skybrand-100 text-skybrand-600">
+                                    ${course.categoryLabel}
+                                </span>
+                            </div>
+
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                <strong class="text-navy-900">الفئة المستهدفة:</strong> ${course.targetAudience}
+                            </p>
+
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed line-clamp-3">
+                                <strong class="text-navy-900">الهدف العام:</strong> ${course.generalObjective}
+                            </p>
+
+                            <div class="bg-surface p-3.5 rounded-2xl border border-slate-200/80">
+                                <span class="block text-xs font-extrabold text-navy-900 mb-2">أبرز المحاور التدريبية (${course.syllabus.length} محاور):</span>
+                                <ul class="space-y-1.5 text-xs text-slate-700">
+                                    ${course.syllabus.slice(0, 3).map(item => `
+                                        <li class="flex items-start gap-2">
+                                            <i class="fa-solid fa-check text-gold-600 mt-0.5 flex-shrink-0"></i>
+                                            <span class="line-clamp-1">${item}</span>
+                                        </li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 border-t border-slate-100 flex items-center gap-2.5">
+                            <button type="button" onclick="openDetailModal(${course.id})" class="flex-1 bg-navy-900 hover:bg-navy-800 text-white font-bold text-xs sm:text-sm py-3 px-4 rounded-xl transition-colors flex items-center justify-center gap-2 cursor-pointer">
+                                <i class="fa-solid fa-eye text-gold-400"></i>
+                                <span>عرض المحاور التفصيلية والمخرج المهني</span>
+                            </button>
+                            <button type="button" onclick="openRegisterModal('${course.titleAr}')" title="سجل في هذه الدورة" class="w-11 h-11 rounded-xl gold-gradient text-navy-950 font-bold flex items-center justify-center shadow-sm hover:brightness-105 transition-all flex-shrink-0 cursor-pointer">
+                                <i class="fa-solid fa-user-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        // إعداد مستمعي الأحداث للفلترة والبحث الفوري
+        function setupEventListeners() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => {
+                        b.classList.remove('bg-navy-900', 'text-white', 'shadow-sm');
+                        b.classList.add('bg-white', 'text-navy-800', 'border', 'border-slate-200');
+                    });
+                    btn.classList.remove('bg-white', 'text-navy-800', 'border', 'border-slate-200');
+                    btn.classList.add('bg-navy-900', 'text-white', 'shadow-sm');
+
+                    currentFilter = btn.getAttribute('data-filter');
+                    renderCoursesGrid();
+                });
+            });
+
+            const searchInput = document.getElementById('courseSearchInput');
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    currentSearch = e.target.value;
+                    renderCoursesGrid();
+                });
+            }
+        }
+
+        // إعادة ضبط الفلاتر والبحث
+        function resetFilters() {
+            currentFilter = 'all';
+            currentSearch = '';
+            const searchInput = document.getElementById('courseSearchInput');
+            if (searchInput) searchInput.value = '';
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            filterBtns.forEach((b, i) => {
+                if (i === 0) {
+                    b.classList.remove('bg-white', 'text-navy-800', 'border', 'border-slate-200');
+                    b.classList.add('bg-navy-900', 'text-white', 'shadow-sm');
+                } else {
+                    b.classList.remove('bg-navy-900', 'text-white', 'shadow-sm');
+                    b.classList.add('bg-white', 'text-navy-800', 'border', 'border-slate-200');
+                }
+            });
+            renderCoursesGrid();
+        }
+
+        // فتح تفاصيل الدورة عند النقر عليها في المصفوفة
+        function scrollToAndOpenCourse(courseId) {
+            openDetailModal(courseId);
+        }
+
+        // فتح نافذة تفاصيل الدورة الكاملة
+        function openDetailModal(courseId) {
+            const course = coursesData.find(c => c.id === courseId);
+            if (!course) return;
+
+            document.getElementById('modalCourseNumber').textContent = course.numberLabel;
+            document.getElementById('modalCourseCategory').textContent = course.categoryLabel;
+            document.getElementById('modalCourseTitleAr').textContent = course.titleAr;
+            document.getElementById('modalCourseTitleEn').textContent = course.titleEn;
+            document.getElementById('modalTargetAudience').textContent = course.targetAudience;
+            document.getElementById('modalDuration').textContent = course.detailedDuration;
+            document.getElementById('modalGeneralObjective').textContent = course.generalObjective;
+            document.getElementById('modalExpectedOutcome').textContent = course.expectedOutcome;
+
+            const syllabusList = document.getElementById('modalSyllabusList');
+            syllabusList.innerHTML = course.syllabus.map((item, index) => `
+                <li class="flex items-start gap-3 bg-surface p-3 rounded-xl border border-slate-200/70 text-sm text-navy-900">
+                    <span class="w-6 h-6 rounded-lg bg-navy-900 text-gold-400 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
+                        ${index + 1}
+                    </span>
+                    <span class="leading-relaxed font-medium">${item}</span>
+                </li>
+            `).join('');
+
+            const registerBtn = document.getElementById('modalRegisterBtn');
+            registerBtn.onclick = () => {
+                closeDetailModal();
+                openRegisterModal(course.titleAr);
+            };
+
+            const modal = document.getElementById('courseDetailModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // إغلاق نافذة تفاصيل الدورة
+        function closeDetailModal() {
+            const modal = document.getElementById('courseDetailModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        // تعبئة قائمة اختيار الدورة في نموذج التسجيل
+        function populateCourseSelect() {
+            const select = document.getElementById('regCourseSelect');
+            if (!select) return;
+            select.innerHTML = coursesData.map(c =>
+                `<option value="${c.titleAr}">${c.numberLabel}: ${c.titleAr}</option>`
+            ).join('') + `<option value="حزمة مسار مهني متكامل (أكثر من دورة)">حزمة مسار مهني متكامل (أكثر من دورة)</option>`;
+        }
+
+        // فتح نافذة التسجيل والاستفسار
+        function openRegisterModal(selectedCourseTitle) {
+            const modal = document.getElementById('registerModal');
+            const form = document.getElementById('registrationForm');
+            const successBox = document.getElementById('registrationSuccess');
+            const select = document.getElementById('regCourseSelect');
+
+            form.classList.remove('hidden');
+            successBox.classList.add('hidden');
+
+            if (selectedCourseTitle) {
+                select.value = selectedCourseTitle;
+            }
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // إغلاق نافذة التسجيل والاستفسار
+        function closeRegisterModal() {
+            const modal = document.getElementById('registerModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        // معالجة إرسال النموذج وتوليد رسالة mailto: المباشرة إلى icmpsr.center@gmail.com
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('regName').value.trim();
+            const phone = document.getElementById('regPhone').value.trim();
+            const email = document.getElementById('regEmail').value.trim();
+            const course = document.getElementById('regCourseSelect').value;
+            const mode = document.querySelector('input[name="trainingMode"]:checked').value;
+            const notes = document.getElementById('regNotes').value.trim();
+
+            const recipientEmail = 'icmpsr.center@gmail.com';
+            const subject = `طلب تسجيل / استفسار تدريبي (ICMPSR) - ${course}`;
+
+            const bodyLines = [
+                'السادة في قسم التدريب والتعليم المستمر - المركز الدولي للدراسات والأبحاث الطبية والصيدلانية (ICMPSR) المحترمين،',
+                'تحية طيبة وبعد،،،',
+                '',
+                'أرغب في تسجيل اهتمامي والانضمام إلى البرنامج التدريبي الموضح أدناه:',
+                '--------------------------------------------------',
+                `• الاسم الكامل: ${name}`,
+                `• رقم الهاتف / واتساب: ${phone}`,
+                `• البريد الإلكتروني: ${email}`,
+                `• الدورة التدريبية المختارة: ${course}`,
+                `• نظام التدريب المفضل: ${mode}`,
+                `• ملاحظات إضافية: ${notes ? notes : 'لا يوجد'}`,
+                '--------------------------------------------------',
+                'يرجى تزويدي بالتفاصيل الكاملة ومواعيد الانعقاد وآلية تأكيد التسجيل.',
+                'وتفضلوا بقبول فائق الاحترام والتقدير.'
+            ];
+
+            const plainBodyText = bodyLines.join('\n');
+            const mailtoUrl = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(plainBodyText)}`;
+
+            document.getElementById('registrationForm').classList.add('hidden');
+            const successBox = document.getElementById('registrationSuccess');
+            successBox.classList.remove('hidden');
+
+            document.getElementById('successSummaryText').innerHTML = `
+                أهلاً بك <strong>${name}</strong>، يتم الآن توجيه طلبك للالتحاق ببرنامج:<br>
+                <span class="text-navy-900 font-extrabold block my-1">"${course}"</span>
+                إلى البريد الإلكتروني الرسمي للمركز: <span class="en-text font-bold text-skybrand-600">${recipientEmail}</span>
+            `;
+
+            document.getElementById('directMailtoLink').setAttribute('href', mailtoUrl);
+            document.getElementById('generatedEmailBody').value = `إلى: ${recipientEmail}\nالموضوع: ${subject}\n\n${plainBodyText}`;
+
+            const copyBtn = document.getElementById('copyRequestBtn');
+            copyBtn.innerHTML = '<i class="fa-regular fa-copy"></i><span>نسخ نص الطلب للإرسال اليدوي</span>';
+
+            window.location.href = mailtoUrl;
+        }
+
+        // نسخ نص الطلب الجاهز للإرسال اليدوي
+        function copyRequestDetails() {
+            const textarea = document.getElementById('generatedEmailBody');
+            if (!textarea) return;
+            textarea.select();
+            textarea.setSelectionRange(0, 99999);
+            try {
+                document.execCommand('copy');
+                const copyBtn = document.getElementById('copyRequestBtn');
+                copyBtn.innerHTML = '<i class="fa-solid fa-check text-emerald-700"></i><span>تم نسخ نص الطلب بنجاح!</span>';
+            } catch (err) {
+                console.error('Copy failed', err);
+            }
+        }
+
+        // إغلاق النوافذ المنبثقة عند النقر خارجها
+        window.addEventListener('click', (e) => {
+            const detailModal = document.getElementById('courseDetailModal');
+            const regModal = document.getElementById('registerModal');
+            if (e.target === detailModal) closeDetailModal();
+            if (e.target === regModal) closeRegisterModal();
+        });
+    </script>
+</body>
+</html>
+```
